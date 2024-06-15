@@ -36,18 +36,16 @@ def exercise_3():
     file = open("C:\\Users\\admin\\OneDrive\\Tài liệu\\AIO-Exercise\Module_1\\file_data.txt")
     def count_word(file_data):
         tmp = {}
-        for line in file_data:
-            words = line.split()
-            for word in words:
-                word = word.lower()
-                if word in tmp:
-                    tmp[word] += 1
-                else:
-                    tmp[word] = 1
+        data = file_data.split(" ")
+        for word in data:
+            if word in tmp:
+                tmp[word] += 1
+            else:
+                tmp[word] = 1
         return tmp
     
     def question_3():
-        file_data = file.read()
+        file_data = file.read().lower().replace("\n", "")
         count_file = count_word(file_data)
         for a , b in count_file.items():
             print(a, b)
@@ -83,7 +81,6 @@ def exercise_4():
     levenshtein_distance(s1, s2)
 
 if __name__ == "__main__":
-  
     exercise = int(input("Select the exercise you want to test:\n 1:exercise_1\n 2:exercise_2\n 3:exercise_3\n 4:exercise_4\n"))
     if exercise == 1:
       exercise_1()
