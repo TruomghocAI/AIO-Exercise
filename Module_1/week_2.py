@@ -27,8 +27,8 @@ def exercise_2():
 
     def question_2():
         strings = "Happiness"
-        dict = count_chars(strings)
-        for a , b in dict.items():
+        dic_cnt = count_chars(strings)
+        for a , b in dic_cnt.items():
             print(a,b)
     question_2()
 
