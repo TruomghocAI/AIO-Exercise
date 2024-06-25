@@ -29,7 +29,7 @@ def exercise_2():
     def question_2():
         strings = "Happiness"
         dic_data = count_chars(strings)
-        for a, b in dict.items():
+        for a, b in dic_data.items():
             print(a, b)
     question_2()
 
@@ -40,18 +40,16 @@ def exercise_3():
 
     def count_word(file_data):
         tmp = {}
-        for line in file_data:
-            words = line.split()
-            for word in words:
-                word = word.lower()
-                if word in tmp:
-                    tmp[word] += 1
-                else:
-                    tmp[word] = 1
+        data = file_data.split(" ")
+        for word in data:
+            if word in tmp:
+                tmp[word] += 1
+            else:
+                tmp[word] = 1
         return tmp
 
     def question_3():
-        file_data = file.read()
+        file_data = file.read().lower().replace("\n", "")
         count_file = count_word(file_data)
         for a, b in count_file.items():
             print(a, b)
