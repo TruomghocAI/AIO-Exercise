@@ -1,3 +1,4 @@
+"""test"""
 def exercise_1():
     def sliding_window(lst_data, k):
         data_sliding = []
