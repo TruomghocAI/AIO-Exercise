@@ -29,7 +29,7 @@ def exercise_2():
     def question_2():
         strings = "Happiness"
         dic_data = count_chars(strings)
-        for a, b in dict.items():
+        for a, b in dic_data.items():
             print(a, b)
     question_2()
 
