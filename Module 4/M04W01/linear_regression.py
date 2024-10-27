@@ -71,8 +71,8 @@ class LinearRegression:
 if __name__ == '__main__':
 
     np.random.seed(42)
-    X = np.random.rand(100, 1) * 10    
-    y = 4 * X + 3 + np.random.randn(100, 1) * 0.5
+    X = np.random.rand(10, 1) * 10    
+    y = 4 * X + 3 + np.random.randn(10, 1) * 0.5
     model = LinearRegression(lr=0.001, epochs=200)
     losses = model.fit(X, y)
     model.plot_loss(losses)
